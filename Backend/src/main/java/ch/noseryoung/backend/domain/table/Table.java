@@ -1,7 +1,7 @@
 package ch.noseryoung.backend.domain.table;
 
-import jakarta.persistence.Entity;
+//import jakarta.persistence.Entity;
 
-@Entity
+//@Entity
 public class Table {
 }
