@@ -40,3 +40,5 @@ INSERT INTO dishes (id, name, description, price, category, chefs_choice, image_
                                                                                          (24, 'Tub Tim Grob', 'Wasserkastanien in Kokosmilch mit Crushed Ice', 5.90, 'Dessert', FALSE, 'https://hot-thai-kitchen.com/wp-content/uploads/2019/12/tub-tim-krob-sm.jpg'),
                                                                                          (25, 'Bua Loy', 'Reisbällchen in süßer Kokosmilch', 5.90, 'Dessert', FALSE, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1H7yD1cH9Jg9zsPbBqtRDDHt6ABUI_GRwew&s%27)'),
                                                                                          (26, 'Sangkhaya', 'Thailändischer Kokos-Pudding mit Kürbis', 6.00, 'Dessert', FALSE, 'https://us.123rf.com/450wm/changephoto/changephoto1904/changephoto190400105/121071471-sticky-rice-with-steamed-custard-in-banana-leave.jpg?ver=6%27)');
+
+
