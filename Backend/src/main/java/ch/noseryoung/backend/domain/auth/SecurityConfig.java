@@ -26,13 +26,28 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                // Wir verwenden JWT, daher kein CSRF-Token nötig
                 .csrf(csrf -> csrf.disable())
+
+                // Stateless: jede Anfrage enthält ein eigenes JWT
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+
+                // Zugriffsregeln definieren
                 .authorizeHttpRequests(auth -> auth
+                        // Auth‑Endpunkte immer frei
                         .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                        // Swagger + OpenAPI frei zugänglich, damit UI /openapi.json laden kann
+                        .requestMatchers(
+                                "/swagger-ui.html",          // alter Pfad
+                                "/swagger-ui/**",            // statische Assets
+                                "/v3/api-docs/**",           // JSON/YAML Docs
+                                "/openapi.json"              // springdoc.custom-path falls gesetzt
+                        ).permitAll()
+                        // Alles andere braucht Authentifizierung
                         .anyRequest().authenticated()
                 )
+
+                // JWT‑Filter vor UsernamePasswordAuthenticationFilter einhängen
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

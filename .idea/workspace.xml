@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68e071a0-5ad1-41e6-abec-f6d85a79c1de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/ch/noseryoung/backend/domain/menu/MenuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/ch/noseryoung/backend/domain/menu/MenuRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="68e071a0-5ad1-41e6-abec-f6d85a79c1de" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1749627359473</updated>
       <workItem from="1749627360611" duration="2304000" />
+      <workItem from="1749651533897" duration="5000" />
     </task>
     <servers />
   </component>
