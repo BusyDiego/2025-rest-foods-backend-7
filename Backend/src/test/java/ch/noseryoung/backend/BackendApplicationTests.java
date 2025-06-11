@@ -1,10 +1,10 @@
-package ch.noseryoung.uek295adiedec;
+package ch.noseryoung.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Uek295ADieDecApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {

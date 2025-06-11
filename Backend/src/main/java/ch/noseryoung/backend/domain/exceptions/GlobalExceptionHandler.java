@@ -1,4 +1,4 @@
-package ch.noseryoung.uek295adiedec.domain.exceptions;
+package ch.noseryoung.backend.domain.exceptions;
 
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.EntityNotFoundException;

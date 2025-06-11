@@ -1,4 +1,4 @@
-package  ch.noseryoung.uek295adiedec.domain.bookstore;
+package  ch.noseryoung.backend.domain.bookstore;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

@@ -1,6 +1,6 @@
-package ch.noseryoung.uek295adiedec.domain.bookstore;
+package ch.noseryoung.backend.domain.bookstore;
 
-import ch.noseryoung.uek295adiedec.domain.review.Review;
+import ch.noseryoung.backend.domain.review.Review;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

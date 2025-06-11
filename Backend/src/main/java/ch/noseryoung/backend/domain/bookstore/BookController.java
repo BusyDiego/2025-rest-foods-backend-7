@@ -1,8 +1,8 @@
-package ch.noseryoung.uek295adiedec.domain.bookstore;
+package ch.noseryoung.backend.domain.bookstore;
 
-import ch.noseryoung.uek295adiedec.domain.review.Review;
-import ch.noseryoung.uek295adiedec.domain.review.ReviewRepository;
-import ch.noseryoung.uek295adiedec.domain.review.ReviewService;
+import ch.noseryoung.backend.domain.review.Review;
+import ch.noseryoung.backend.domain.review.ReviewRepository;
+import ch.noseryoung.backend.domain.review.ReviewService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

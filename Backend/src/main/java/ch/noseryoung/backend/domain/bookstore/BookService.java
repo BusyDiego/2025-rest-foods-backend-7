@@ -1,7 +1,7 @@
-package ch.noseryoung.uek295adiedec.domain.bookstore;
+package ch.noseryoung.backend.domain.bookstore;
 
 
-import ch.noseryoung.uek295adiedec.domain.exceptions.NotFoundException;
+import ch.noseryoung.backend.domain.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
