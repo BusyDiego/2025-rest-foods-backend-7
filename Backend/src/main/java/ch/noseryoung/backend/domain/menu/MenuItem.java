@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "menu_items") // wichtig: Name der Tabelle!
+@Table(name = "menu_items")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class MenuItem {
 
     @Id
@@ -15,11 +16,8 @@ public class MenuItem {
     private Long id;
 
     private String name;
-
     private String description;
-
     private Double price;
-
     private String category;
 
     @Column(name = "chefs_choice")

@@ -34,19 +34,18 @@ public class SecurityConfig {
 
                 // Zugriffsregeln definieren
                 .authorizeHttpRequests(auth -> auth
-                        // Auth‑Endpunkte immer frei
                         .requestMatchers("/api/auth/**").permitAll()
-                        // Swagger + OpenAPI frei zugänglich, damit UI /openapi.json laden kann
                         .requestMatchers(
-                                "/swagger-ui.html",          // alter Pfad
-                                "/swagger-ui/**",            // statische Assets
-                                "/v3/api-docs/**",           // JSON/YAML Docs
-                                "/openapi.json"              // springdoc.custom-path falls gesetzt
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/openapi.json"
                         ).permitAll()
-                        // Menu und Reservations GET-Anfragen ohne Token erlauben
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/menu", "/api/menu/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/reservations", "/api/reservations/**").permitAll()
-                        // Alles andere braucht Authentifizierung
+                        .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/reservations", "/api/reservations/**").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/menu", "/api/menu/**").permitAll()
+
                         .anyRequest().authenticated()
                 )
 
