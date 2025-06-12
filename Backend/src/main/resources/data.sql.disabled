@@ -1,4 +1,4 @@
-INSERT INTO dishes (id, name, description, price, category, chefs_choice, image_url) VALUES
+INSERT INTO menu_items (id, name, description, price, category, chefs_choice, image_url) VALUES
                                                                                          (1, 'Satay Gai', 'Gegrillte Hähnchenspieße mit Erdnusssauce', 6.90, 'Appetizer', FALSE, 'https://www.thai-food-online.co.uk/cdn/shop/files/satay-chicken-recipe.png?v=1615891902%27)'),
                                                                                          (2, 'Poh Pia Tod', 'Knusprige Frühlingsrollen mit Gemüse oder Fleisch', 5.90, 'Appetizer', FALSE, 'https://www.thefoodieluv.com/wp-content/uploads/2019/05/poh-pia-tod-on-lettuce-2.jpg'),
                                                                                          (3, 'Tod Mun Pla', 'Fischkuchen mit rotem Curry und Kaffirlimette', 6.50, 'Appetizer', FALSE, 'https://www.lionbrand.com.au/wp-content/uploads/2022/07/feature-Image-Thai-Fish-Cake-Recipe.jpg%27)'),

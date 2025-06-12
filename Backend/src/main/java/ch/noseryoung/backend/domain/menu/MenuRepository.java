@@ -1,7 +1,6 @@
 package ch.noseryoung.backend.domain.menu;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface MenuRepository {
+public interface MenuRepository extends JpaRepository<MenuItem, Long> {
 }
