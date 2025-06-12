@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-@Hidden
+@Hidden // Hide this controller from Swagger documentation
 public class GlobalExceptionHandler {
-
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<String> handleEntityNotFoundException(EntityNotFoundException nfe) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(nfe.getMessage());

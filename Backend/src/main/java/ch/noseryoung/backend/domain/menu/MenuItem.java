@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "menu_items") // <-- Tabellenname in deiner DB
+@Table(name = "menu_items") // wichtig: Name der Tabelle!
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,5 +16,15 @@ public class MenuItem {
 
     private String name;
 
-    private double price;
+    private String description;
+
+    private Double price;
+
+    private String category;
+
+    @Column(name = "chefs_choice")
+    private Boolean chefsChoice;
+
+    @Column(name = "image_url")
+    private String imageUrl;
 }
