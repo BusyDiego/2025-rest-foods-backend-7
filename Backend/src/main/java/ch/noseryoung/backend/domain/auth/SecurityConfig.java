@@ -43,6 +43,9 @@ public class SecurityConfig {
                                 "/v3/api-docs/**",           // JSON/YAML Docs
                                 "/openapi.json"              // springdoc.custom-path falls gesetzt
                         ).permitAll()
+                        // Menu und Reservations GET-Anfragen ohne Token erlauben
+                        .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/menu", "/api/menu/**").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/reservations", "/api/reservations/**").permitAll()
                         // Alles andere braucht Authentifizierung
                         .anyRequest().authenticated()
                 )
