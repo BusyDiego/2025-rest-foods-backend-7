@@ -2,6 +2,7 @@ package ch.noseryoung.backend.domain.reservation;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -10,22 +11,33 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Reservation {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    private String customerName;
-    
+
+    @Column(name = "guest_name", nullable = false)
+    private String guestName;
+
+    @Column(name = "phone_number", nullable = false)
+    private String phoneNumber;
+
+    @Column(name = "start_time", nullable = false)
+    private LocalDateTime startTime;
+
+    @Column(name = "table_id", nullable = false)
+    private Integer tableId;
+
+    @Column(name = "people_count", nullable = false)
+    private Integer peopleCount;
+
+    @Column(name = "email")
     private String email;
-    
-    private String phone;
-    
-    private LocalDateTime reservationDateTime;
-    
-    private Integer numberOfPeople;
-    
+
+    // optional: falls du `status`, `special_requests`, `number_of_people`, etc. später noch brauchst
+    @Column(name = "special_requests")
     private String specialRequests;
-    
+
+    @Column(name = "status")
     private String status = "PENDING";
 }

@@ -3,6 +3,7 @@ package ch.noseryoung.backend.domain.auth;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -43,8 +44,13 @@ public class SecurityConfig {
                         ).permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/menu", "/api/menu/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/reservations", "/api/reservations/**").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/tables", "/api/tables/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/reservations", "/api/reservations/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/menu", "/api/menu/**").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/tables", "/api/tables/**").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.DELETE, "/api/reservations", "/api/reservations/**").permitAll()
+                        .requestMatchers(HttpMethod.DELETE, "/api/menu/**").permitAll()
+
 
                         .anyRequest().authenticated()
                 )
