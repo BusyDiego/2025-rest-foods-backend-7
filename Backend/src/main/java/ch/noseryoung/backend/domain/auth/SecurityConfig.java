@@ -45,9 +45,11 @@ public class SecurityConfig {
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/menu", "/api/menu/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/reservations", "/api/reservations/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/tables", "/api/tables/**").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/categories", "/api/categories/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/reservations", "/api/reservations/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/menu", "/api/menu/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/tables", "/api/tables/**").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/categories", "/api/categories/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.DELETE, "/api/reservations", "/api/reservations/**").permitAll()
                         .requestMatchers(HttpMethod.DELETE, "/api/menu/**").permitAll()
 

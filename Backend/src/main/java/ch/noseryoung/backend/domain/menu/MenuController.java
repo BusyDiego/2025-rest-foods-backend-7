@@ -28,14 +28,20 @@ public class MenuController {
 
     @PostMapping
     public ResponseEntity<MenuItem> createMenuItem(@RequestBody MenuItem menuItem) {
+        menuItem.setId(null); // <-- Sicherstellen, dass KEINE ID manuell mitkommt!
         MenuItem created = menuService.create(menuItem);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<MenuItem> updateMenuItem(@PathVariable Long id, @RequestBody MenuItem menuItem) {
+        MenuItem updated = menuService.update(id, menuItem);
+        return ResponseEntity.ok(updated);
+    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMenuItem(@PathVariable Long id) {
-        if (!menuService.findById(id).isPresent()) {
+        if (menuService.findById(id).isEmpty()) {
             return ResponseEntity.notFound().build();
         }
         menuService.delete(id);
