@@ -15,6 +15,10 @@ public class MenuService {
         return menuRepository.findAll();
     }
     
+    public List<MenuItem> findAllWithFilters(Boolean chefsChoice, String category, Double minPrice, Double maxPrice) {
+        return menuRepository.findAllWithFilters(chefsChoice, category, minPrice, maxPrice);
+    }
+    
     public Optional<MenuItem> findById(Long id) {
         return menuRepository.findById(id);
     }
