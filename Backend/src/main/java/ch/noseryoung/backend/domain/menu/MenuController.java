@@ -15,7 +15,13 @@ public class MenuController {
     private final MenuService menuService;
 
     @GetMapping
-    public List<MenuItem> getAllMenuItems() {
+    public List<MenuItem> getAllMenuItems(@RequestParam(required = false) Boolean chefsChoice,
+                                          @RequestParam(required = false) String category,
+                                          @RequestParam(required = false) Double minPrice,
+                                          @RequestParam(required = false) Double maxPrice) {
+        if (chefsChoice != null || category != null || minPrice != null || maxPrice != null) {
+            return menuService.findAllWithFilters(chefsChoice, category, minPrice, maxPrice);
+        }
         return menuService.findAll();
     }
 
