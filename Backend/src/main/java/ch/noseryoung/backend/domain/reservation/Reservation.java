@@ -3,6 +3,7 @@ package ch.noseryoung.backend.domain.reservation;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -34,10 +35,12 @@ public class Reservation {
     @Column(name = "email")
     private String email;
 
-    // optional: falls du `status`, `special_requests`, `number_of_people`, etc. später noch brauchst
     @Column(name = "special_requests")
     private String specialRequests;
 
     @Column(name = "status")
     private String status = "PENDING";
+    
+    @Column(name = "date")
+    private LocalDate date;
 }

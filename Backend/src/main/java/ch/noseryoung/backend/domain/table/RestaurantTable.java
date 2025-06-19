@@ -15,12 +15,6 @@ public class RestaurantTable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "table_number", nullable = false)
-    private Integer tableNumber;
-
     @Column(nullable = false)
     private Integer seats;
-
-    @Column(nullable = false)
-    private Boolean available;
 }
