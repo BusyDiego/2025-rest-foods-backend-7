@@ -18,29 +18,22 @@ public class Reservation {
     private Long id;
 
     @Column(name = "guest_name", nullable = false)
-    private String guestName;
+    private String guest_name;
 
     @Column(name = "phone_number", nullable = false)
-    private String phoneNumber;
+    private String phone_number;
 
     @Column(name = "start_time", nullable = false)
-    private LocalDateTime startTime;
+    private LocalDateTime start_time;
+
+    @Column(name = "end_time", nullable = false)
+    private LocalDateTime end_time;
 
     @Column(name = "table_id", nullable = false)
-    private Integer tableId;
+    private Integer table_id;
 
     @Column(name = "people_count", nullable = false)
-    private Integer peopleCount;
+    private Integer people_count;
 
-    @Column(name = "email")
-    private String email;
 
-    @Column(name = "special_requests")
-    private String specialRequests;
-
-    @Column(name = "status")
-    private String status = "PENDING";
-    
-    @Column(name = "date")
-    private LocalDate date;
 }
